@@ -1,0 +1,58 @@
+[
+    {
+      "id": 1,
+      "name": "Vinay",
+      "address": {
+        "city": "Pune",
+        "state": "Maharashtra",
+        "zipcode": 411001
+      },
+      "contact_details": {
+        "phone": "123-456-7890",
+        "email": "vinay@example.com"
+      },
+      "skills": ["Python", "SQL", "Azure"]
+    },
+    {
+      "id": 2,
+      "name": "Sara",
+      "address": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "zipcode": 400001
+      },
+      "contact_details": {
+        "phone": "987-654-3210",
+        "email": "sara@example.com"
+      },
+      "skills": ["Spark", "Scala", "Hadoop"]
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "address": {
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "zipcode": 560001
+      },
+      "contact_details": {
+        "phone": "456-789-0123",
+        "email": "john@example.com"
+      },
+      "skills": ["Databricks", "Kafka", "Cloud"]
+    },
+    {
+      "id": 4,
+      "name": "Alice",
+      "address": {
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "zipcode": 500001
+      },
+      "contact_details": {
+        "phone": "789-012-3456",
+        "email": "alice@example.com"
+      },
+      "skills": ["SQL", "Data Engineering", "Kubernetes"]
+    }
+]

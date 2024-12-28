@@ -24,3 +24,45 @@ with cte as (
 )
 
 select rount(avg(percent),2) from cte
+
+
+##########################################################################################################
+
+
+-- calculate rolling average 
+
+
+-- Use UNBOUNDED PRECEDING when calculating avg/sum from 1st row
+SELECT 
+    employee_name,
+    sales_date,
+    sales_amount,
+    SUM(sales_amount) OVER (
+        ORDER BY sales_date 
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+    ) AS rolling_sum_all_prev
+FROM sales;
+
+
+
+
+-- Use offset (integer) PRECEDING when calculating avg/sum from last nth  row
+
+
+SELECT 
+    employee_name,
+    sales_date,
+    sales_amount,
+    COALESCE(AVG(sales_amount) OVER (
+        ORDER BY sales_date 
+        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+    ), sales_amount) AS rolling_avg_no_gaps
+FROM sales;
+
+
+
+
+
+
+
+
